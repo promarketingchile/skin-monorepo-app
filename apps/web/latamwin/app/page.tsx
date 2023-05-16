@@ -1,10 +1,11 @@
-import { Button, Header } from "ui-latamwin";
+import { Button } from "ui-latamwin";
+import { toSlug } from "@acme/utils";
 
 export default function Page() {
   return (
     <>
-      <Header text="Red" />
-      <Button />
+      {toSlug("latamwin-chile")}
+      <Button>Hello</Button>
     </>
   );
 }
