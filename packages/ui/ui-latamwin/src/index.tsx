@@ -1,2 +1,6 @@
-import * as React from "react";
-export { Button, type ButtonProps } from "./Button";
+// styles
+import "./styles.css";
+
+// components
+export * from "./Button";
+export * from "./Card";
