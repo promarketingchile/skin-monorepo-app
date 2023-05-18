@@ -7,7 +7,7 @@ export default function Page() {
       <div className="flex w-full justify-center text-lg bg-red-900">
         {toSlug("latamwin-chile")}
       </div>
-      <Button>Hello</Button>
+      <Button/>
     </>
   );
 }
