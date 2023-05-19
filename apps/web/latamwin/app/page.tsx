@@ -4,10 +4,10 @@ import { toSlug } from "@acme/utils";
 export default function Page() {
   return (
     <>
-      <div className="flex w-full justify-center text-lg bg-red-900">
+      <div className="flex w-full justify-center bg-red-900 text-lg">
         {toSlug("latamwin-chile")}
       </div>
-      <Button/>
+      <Button title="From App Latamwin" />
     </>
   );
 }
