@@ -1,0 +1,8 @@
+**/.changeset/
+**/coverage/
+**/dist/
+**/storybook-static/
+**/.next
+**/.git
+**/node_modules
+**/.gitlab-c
