@@ -46,8 +46,6 @@ module.exports = {
 			rules: {
 				'react/react-in-jsx-scope': 'off',
 				'react/jsx-uses-react': 'off',
-				'jsdoc/require-jsdoc': 'off',
-				'jsdoc/require-param': 'off',
 				'no-undef': 'off',
 
 				'@typescript-eslint/naming-convention': [
@@ -67,6 +65,9 @@ module.exports = {
 		},
 	],
 	rules: {
+		'jsdoc/require-jsdoc': 'off',
+		'jsdoc/require-param': 'off',
+		'jsdoc/newline-after-description': 'off',
 		'import/no-extraneous-dependencies': [
 			'error',
 			{

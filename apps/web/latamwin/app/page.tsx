@@ -1,7 +1,7 @@
 import { toSlug } from '@acme/utils';
 import { PrimaryButton } from 'ui-divergana';
 
-import variables from 'ui-divergana/src/index.module.scss';
+import 'ui-divergana/src/index.module.scss';
 
 export default function Page() {
 	return (

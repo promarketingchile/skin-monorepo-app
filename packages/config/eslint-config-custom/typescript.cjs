@@ -5,6 +5,7 @@ module.exports = {
 		"jsdoc/require-param-type": "off",
 		"jsdoc/require-property-type": "off",
 		"jsdoc/require-returns-type": "off",
+		"import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
 		"@typescript-eslint/consistent-type-definitions": "error",
 		"@typescript-eslint/no-explicit-any": "error",
 		"@typescript-eslint/no-non-null-assertion": "error",
