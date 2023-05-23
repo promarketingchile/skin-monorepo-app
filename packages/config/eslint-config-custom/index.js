@@ -1,4 +1,7 @@
 // eslint-disable-next-line no-undef
+const path = require('path');
+const currentPath = path.resolve(__dirname);
+
 module.exports = {
 	globals: {
 		React: true,
@@ -9,8 +12,8 @@ module.exports = {
 		JSX: true,
 	},
 	extends: [
-		'./jsdoc.cjs',
-		'./typescript.cjs',
+		path.join(__dirname, 'jsdoc.cjs'),
+		path.join(__dirname, 'typescript.cjs'),
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
 		'prettier',
