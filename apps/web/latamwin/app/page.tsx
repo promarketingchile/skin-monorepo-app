@@ -1,15 +1,15 @@
 import { toSlug } from '@acme/utils';
 import { PrimaryButton } from 'ui-divergana';
 
-import 'tailwindcss/tailwind.css';
-import 'ui-divergana/src/index.module.scss';
+
+import './../style.scss';
 
 export default function Page() {
 	return (
 		<>
-			<div className='flex w-full justify-center text-lg'>
+			<div className='flex w-full justify-center text-lg bg-winchile-base'>
 				<h2>{toSlug('latamwin-chile')}</h2>
-				<PrimaryButton>Botón Primario</PrimaryButton>
+				<PrimaryButton className='bg-winchile-content'>Botón Primario</PrimaryButton>
 			</div>
 		</>
 	);

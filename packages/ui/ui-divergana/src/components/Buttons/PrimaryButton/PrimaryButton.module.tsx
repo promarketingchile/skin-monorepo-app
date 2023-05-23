@@ -1,27 +1,33 @@
-import { IParimaryButtonProps, IParimaryButtonSize, IParimaryButtonStyle, IParimaryButtonType } from "./PrimaryButton.interface";
+import {
+	IParimaryButtonProps,
+	IParimaryButtonSize,
+	IParimaryButtonStyle,
+	IParimaryButtonType,
+} from './PrimaryButton.interface';
 
-import "./PrimaryButton.module.scss"
+import './PrimaryButton.module.scss';
 
-import { btnGetType,btnSize } from "./PrimaryButton.utils";
-const PrimaryButton = (props:IParimaryButtonProps) => {
-    const {
-        children,
-        buttonSize = IParimaryButtonSize.medium,
-        buttonType = IParimaryButtonType.primary,
-        buttonStyle = IParimaryButtonStyle.default,
-        prepend = undefined,
-	    append = undefined,
-        loading = false,
-	    disabled = false,
-        className = '',
-    } = props;
+import { btnGetType, btnSize } from './PrimaryButton.utils';
+const PrimaryButton = (props: IParimaryButtonProps) => {
+	const {
+		children,
+		buttonSize = IParimaryButtonSize.medium,
+		buttonType = IParimaryButtonType.primary,
+		buttonStyle = IParimaryButtonStyle.default,
+		prepend = undefined,
+		append = undefined,
+		loading = false,
+		disabled = false,
+		className = '',
+	} = props;
 
-    const loadingIcon = loading ? <>...</> : null;
+	const loadingIcon = loading ? <>...</> : null;
 
-    return <button
+	return (
+		<button
 			{...props}
 			className={
-				' font-RobotoCondensed flex items-center border border-2 ' +
+				' font-RobotoCondensed bg-skin-base flex items-center border border-2 ' +
 				btnGetType(buttonType, buttonStyle) +
 				btnSize(buttonSize) +
 				className
@@ -35,6 +41,7 @@ const PrimaryButton = (props:IParimaryButtonProps) => {
 			</span>
 			{append && <>{append}</>}
 		</button>
-}
+	);
+};
 
 export default PrimaryButton;
