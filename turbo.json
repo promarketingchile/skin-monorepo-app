@@ -1,21 +1,33 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
-    "build": {
-      "outputs": ["dist/**", "storybook-static/**"],
-      "dependsOn": ["^build"]
-    },
-    "test": {
-      "outputs": ["coverage/**"],
-      "dependsOn": []
-    },
-    "lint": {},
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "clean": {
-      "cache": false
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": [
+		"**/config-eslint/index.js",
+		"**/prettier-config/index.js",
+		"**/tsconfig/*.json"
+	],
+	"pipeline": {
+		"build": {
+			"outputs": ["dist/**", "storybook-static/**"],
+			"dependsOn": ["^build"]
+		},
+		"test": {
+			"outputs": ["coverage/**"],
+			"dependsOn": []
+		},
+		"lint": {},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		},
+		"clean": {
+			"cache": false
+		}
+	},
+	"globalEnv": [
+		"NEXT_PUBLIC_API_URL",
+		"NEXT_PUBLIC_API_SECRET",
+		"NEXT_PUBLIC_USERNAME",
+		"NEXT_PUBLIC_SKIN",
+		"NEXT_PUBLIC_MOBILE_SIZE"
+	]
 }
