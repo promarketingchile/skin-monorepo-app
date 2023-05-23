@@ -1,4 +1,5 @@
-import 'ui-latamwin/styles.css';
+import 'tailwindcss/tailwind.css';
+import 'ui-divergana/src/globals.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
