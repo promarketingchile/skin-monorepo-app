@@ -1,0 +1,13 @@
+{
+	"extends": "tsconfig/base.json",
+	"compilerOptions": {
+		"types": ["@types/jest", "@types/node"]
+	},
+	"include": [
+		"app/**/*.ts",
+		"app/**/*.tsx",
+		"packages/**/*.ts",
+		"packages/**/*.tsx"
+	],
+	"exclude": ["node_modules"]
+}

@@ -1,24 +1,39 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Default",
-  "compilerOptions": {
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "jsx": "preserve",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "exclude": ["node_modules"]
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Default",
+	"compilerOptions": {
+		"composite": false,
+		"declaration": true,
+		"declarationMap": true,
+		"inlineSources": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"preserveWatchOutput": true,
+		"noImplicitAny": false,
+		"noImplicitThis": true,
+		"strictNullChecks": false,
+		"experimentalDecorators": true,
+		"removeComments": true,
+		"target": "ESNext",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"typeRoots": ["admin/@types", "node_modules/@types"],
+		"noFallthroughCasesInSwitch": true,
+		"useDefineForClassFields": true,
+		"noEmit": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"exclude": ["node_modules"]
 }
