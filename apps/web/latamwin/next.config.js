@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  swcMinify: true,
+	swcMinify: true,
 	reactStrictMode: true,
-  transpilePackages: ["ui-latamwin","ui-divergana"],
-  sassOptions: {
-    includePaths: ['ui-divergana/components/**/*'],
-  },
+	transpilePackages: ['ui-latamwin', 'ui-divergana'],
+	sassOptions: {
+		includePaths: ['ui-divergana/components/**/*'],
+	},
 	eslint: {
-    dirs: ['app'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
-  },
-  /**
+		dirs: ['app'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+	},
+	/**
 	 * Webpack.
 	 *
 	 * @param config - Config.
@@ -27,7 +27,6 @@ module.exports = {
 		// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 		{ buildId, dev, isServer, defaultLoaders, nextRuntime, webpack },
 	) => {
-	
 		config.resolve.extensionAlias = {
 			'.js': ['.ts', '.tsx', '.js', '.jsx'],
 			'.mjs': ['.mts', '.mjs'],
