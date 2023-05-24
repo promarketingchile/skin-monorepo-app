@@ -27,7 +27,7 @@ const PrimaryButton = (props: IParimaryButtonProps) => {
 		<button
 			{...props}
 			className={
-				' font-RobotoCondensed bg-skin-base flex items-center border border-2 ' +
+				' font-RobotoCondensed  flex items-center border border-2 bg-brand-orange ' +
 				btnGetType(buttonType, buttonStyle) +
 				btnSize(buttonSize) +
 				className
