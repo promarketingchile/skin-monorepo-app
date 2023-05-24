@@ -5,9 +5,7 @@ module.exports = {
   //'@storybook/addon-jest',
   ],
   framework: '@storybook/react-vite',
-  async viteFinal(config, {
-    configType
-  }) {
+  async viteFinal(config) {
     return config;
   },
   docs: {
