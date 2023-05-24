@@ -1,18 +1,18 @@
 import { ArgTypes, Meta, StoryFn } from '@storybook/react';
-import PrimaryButton, { IParimaryButtonProps } from './PrimaryButton.module';
+import PrimaryButton, { IPrimaryButtonProps } from './PrimaryButton.module';
 
 const StoryBookComponent = {
 	title: 'UI-DIVERGANA/PrimaryButton',
 	component: PrimaryButton,
 	//decorators: [withTests({ results })],
-} as Meta<IParimaryButtonProps>;
+} as Meta<IPrimaryButtonProps>;
 
-const Template: StoryFn<IParimaryButtonProps> = (props) => {
+const Template: StoryFn<IPrimaryButtonProps> = (props) => {
   const {children,...args} = props;
 	return <PrimaryButton {...args} >{children}</PrimaryButton>;
 };
 
-const argTypes: Partial<ArgTypes<IParimaryButtonProps>> = {
+const argTypes: Partial<ArgTypes<IPrimaryButtonProps>> = {
 	onClick: { control: false },
   children: { control: false },
 	buttonType: {
@@ -45,82 +45,69 @@ PrimaryButtonDefault.args = {
 	buttonSize: 'large'
 };
 
-export const PMUIButtonPrimaryShadow = Template.bind({});
-
-PMUIButtonPrimaryShadow.argTypes = argTypes;
-PMUIButtonPrimaryShadow.args = {
-	children: 'Text',
+export const PrimaryButtonShadow = Template.bind({});
+PrimaryButtonShadow.argTypes = argTypes;
+PrimaryButtonShadow.args = {
+  children: 'Text',
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	buttonType: 'primary',
-	buttonStyle: 'shadow',
-	buttonSize: 'large'
+  buttonType: 'primary',
+  buttonStyle: 'shadow',
+  buttonSize: 'large'
 };
-
-export const PMUIButtonPrimaryOutlined = Template.bind({});
-
-PMUIButtonPrimaryOutlined.argTypes = argTypes;
-PMUIButtonPrimaryOutlined.args = {
-	children: 'Text',
+export const PrimaryButtonOutlined = Template.bind({});
+PrimaryButtonOutlined.argTypes = argTypes;
+PrimaryButtonOutlined.args = {
+  children: 'Text',
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	buttonType: 'primary',
-	buttonStyle: 'outlined',
-	buttonSize: 'large'
+  buttonType: 'primary',
+  buttonStyle: 'outlined',
+  buttonSize: 'large'
 };
-
-export const PMUIButtonPrimaryText = Template.bind({});
-
-PMUIButtonPrimaryText.argTypes = argTypes;
-PMUIButtonPrimaryText.args = {
-	children: 'Text',
+export const PrimaryButtonText = Template.bind({});
+PrimaryButtonText.argTypes = argTypes;
+PrimaryButtonText.args = {
+  children: 'Text',
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	buttonType: 'primary',
-	buttonStyle: 'text',
-	buttonSize: 'large'
+  buttonType: 'primary',
+  buttonStyle: 'text',
+  buttonSize: 'large'
 };
-
 //Button Secondary
-export const PMUIButtonSecondaryDefault = Template.bind({});
-
-PMUIButtonSecondaryDefault.argTypes = argTypes;
-PMUIButtonSecondaryDefault.args = {
-	children: 'Text',
+export const SecondaryButtonDefault = Template.bind({});
+SecondaryButtonDefault.argTypes = argTypes;
+SecondaryButtonDefault.args = {
+  children: 'Text',
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	buttonType: 'secondary',
-	buttonStyle: 'default',
-	buttonSize: 'large'
+  buttonType: 'secondary',
+  buttonStyle: 'default',
+  buttonSize: 'large'
 };
-
-export const PMUIButtonSecondaryShadow = Template.bind({});
-
-PMUIButtonSecondaryShadow.argTypes = argTypes;
-PMUIButtonSecondaryShadow.args = {
-	children: 'Text',
+export const SecondaryButtonShadow = Template.bind({});
+SecondaryButtonShadow.argTypes = argTypes;
+SecondaryButtonShadow.args = {
+  children: 'Text',
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	buttonType: 'secondary',
-	buttonStyle: 'shadow',
-	buttonSize: 'large'
+  buttonType: 'secondary',
+  buttonStyle: 'shadow',
+  buttonSize: 'large'
 };
-
-export const PMUIButtonSecondaryOutlined = Template.bind({});
-
-PMUIButtonSecondaryOutlined.argTypes = argTypes;
-PMUIButtonSecondaryOutlined.args = {
-	children: 'Text',
+export const SecondaryButtonOutlined = Template.bind({});
+SecondaryButtonOutlined.argTypes = argTypes;
+SecondaryButtonOutlined.args = {
+  children: 'Text',
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	buttonType: 'secondary',
-	buttonStyle: 'outlined',
-	buttonSize: 'large'
+  buttonType: 'secondary',
+  buttonStyle: 'outlined',
+  buttonSize: 'large'
 };
-
-export const PMUIButtonSecondaryText = Template.bind({});
-
-PMUIButtonSecondaryText.argTypes = argTypes;
-PMUIButtonSecondaryText.args = {
-	children: 'Text',
+export const SecondaryButtonText = Template.bind({});
+SecondaryButtonText.argTypes = argTypes;
+SecondaryButtonText.args = {
+  children: 'Text',
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	buttonType: 'secondary',
-	buttonStyle: 'text',
-	buttonSize: 'large'
+  buttonType: 'secondary',
+  buttonStyle: 'text',
+  buttonSize: 'large'
 };
 
 export default StoryBookComponent;

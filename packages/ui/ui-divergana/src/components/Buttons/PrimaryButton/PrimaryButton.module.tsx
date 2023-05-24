@@ -3,7 +3,7 @@ import { type VariantProps } from "class-variance-authority";
 import { cvaPrimaryButton } from "./PrimaryButton.utils";
 import { twMerge } from "tailwind-merge";
 
-export interface IParimaryButtonProps extends VariantProps<typeof cvaPrimaryButton>, React.HTMLAttributes<HTMLButtonElement> {
+export interface IPrimaryButtonProps extends VariantProps<typeof cvaPrimaryButton>, React.HTMLAttributes<HTMLButtonElement> {
 	children: JSX.Element | string,
 	loading?: boolean;
 	disabled?: boolean;
@@ -11,7 +11,7 @@ export interface IParimaryButtonProps extends VariantProps<typeof cvaPrimaryButt
 	append?: JSX.Element;
 }
 
-const PrimaryButton = (props: IParimaryButtonProps) => {
+const PrimaryButton = (props: IPrimaryButtonProps) => {
 	const {
 		children,
 		buttonSize = "medium",
@@ -28,7 +28,7 @@ const PrimaryButton = (props: IParimaryButtonProps) => {
 
 	return <button
 		{...props}
-		className={'font-RobotoCondensed flex items-center ' + twMerge(cvaPrimaryButton({buttonSize,buttonType,buttonStyle}))+' '+className}
+		className={'font-RobotoCondensed bg-pink-600 flex items-center ' + twMerge(cvaPrimaryButton({buttonSize,buttonType,buttonStyle}))+' '+className}
 		disabled={disabled}
 		{...(loading && { disabled: true })}
 	>
