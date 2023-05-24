@@ -1,8 +1,5 @@
-// eslint-disable-next-line import/named
 import { ArgTypes, Meta, StoryFn } from '@storybook/react';
 import PrimaryButton, { IParimaryButtonProps } from './PrimaryButton.module';
-
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 
 const StoryBookComponent = {
 	title: 'UI-DIVERGANA/PrimaryButton',
