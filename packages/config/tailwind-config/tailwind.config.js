@@ -1,14 +1,6 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	content: [
-		// app content
-		// include packages if not transpiling
-		//'../../packages/ui/**/*.{js,ts,jsx,tsx}',
-		//'../../packages/ui/ui-latamwin/src/components/*.{ts,tsx}',
-		//'./src/**/*.{ts,tsx}',
-	],
-	plugins: [],
 	theme: {
 		height: {
 			'pmui--btn-large': 'var(--button-height-large)',
