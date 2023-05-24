@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/named
 import { ArgTypes, Meta, StoryFn } from '@storybook/react';
-import PrimaryButton from './PrimaryButton.module';
-import { IParimaryButtonProps } from './PrimaryButton.interface';
+import PrimaryButton, { IParimaryButtonProps } from './PrimaryButton.module';
+
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 
 const StoryBookComponent = {
