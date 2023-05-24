@@ -10,12 +10,12 @@
         "lint:fix": "prettier --write  \"**/*.{js,ts,tsx,md,mdx,json}\""
     },
     "devDependencies": {
+        "@storybook/react": "^7.0.13",
         "@types/jest": "^29.5.1",
         "@types/node": "^20.2.3",
         "@types/react": "^18.2.6",
         "@types/react-dom": "^18.2.4",
         "babel-jest": "^29.5.0",
-        "identity-obj-proxy": "^3.0.0",
         "jest-cli": "^29.5.0",
         "jest-environment-jsdom": "^29.5.0",
         "jsdom": "^22.0.0",
@@ -36,7 +36,9 @@
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^14.0.0",
         "@testing-library/user-event": "^14.4.3",
+        "class-variance-authority": "^0.6.0",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "tailwind-merge": "^1.12.0"
     }
 }

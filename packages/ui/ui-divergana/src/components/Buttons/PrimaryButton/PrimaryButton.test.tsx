@@ -1,7 +1,6 @@
 import React from 'react'
-import {render, fireEvent, screen} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import ShallowRenderer from 'react-test-renderer/shallow'; 
 import PrimaryButton from './PrimaryButton.module';
 
 describe('PrimaryButton', () => {

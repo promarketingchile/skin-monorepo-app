@@ -1,27 +1,22 @@
 const path = require("path");
-
 module.exports = {
-  stories: ["../stories/**/*.stories.mdx", "../stories/**/*.stories.tsx"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
-  framework: "@storybook/react",
-  core: {
-    builder: "@storybook/builder-vite",
-  },
-  async viteFinal(config, { configType }) {
-    // customize the Vite config here
-    return {
+  stories: ["../stories/**/*.stories.mdx", "../../../packages/ui/ui-divergana/src/**/*.stories.tsx"],
+  addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-postcss"
+  //'@storybook/addon-interactions',
+  //'@storybook/addon-jest',
+  ],
+  framework: '@storybook/react-vite',
+  async viteFinal(config, {
+    configType
+  }) {
+
+    const _config = {
       ...config,
-      resolve: {
-        alias: [
-          {
-            find: "ui",
-            replacement: path.resolve(
-              __dirname,
-              "../../../packages/ui/**"
-            ),
-          },
-        ],
-      },
     };
+   
+    return _config;
   },
+  docs: {
+    autodocs: true
+  }
 };

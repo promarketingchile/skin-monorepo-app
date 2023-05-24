@@ -1,12 +1,8 @@
-const colors = require('tailwindcss/colors');
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		// app content
-		// include packages if not transpiling
-		//'../../packages/ui/**/*.{js,ts,jsx,tsx}',
-		//'../../packages/ui/ui-latamwin/src/components/*.{ts,tsx}',
-		//'./src/**/*.{ts,tsx}',
+		'./src/**/*.{jsx,ts,tsx}',
+		'../../../apps/web/latamwin/src/**/*.{jsx,ts,tsx}',
 	],
 	plugins: [],
 	theme: {
@@ -225,7 +221,7 @@ module.exports = {
 			},
 			boxShadow: {
 				'pmui--btn': 'var(--button-shadow)',
-			}
-		}
-	}
+			},
+		},
+	},
 };
