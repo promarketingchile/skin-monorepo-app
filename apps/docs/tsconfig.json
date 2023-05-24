@@ -1,0 +1,26 @@
+{
+	"extends": "tsconfig/base.json",
+	"compilerOptions": {
+		"baseUrl": "../../",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@/*": ["./src/*"],
+			"@ui-divergana": ["ui-divergana"]
+		},
+		"incremental": true
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"next-env.d.ts",
+		".next/types/**/*.ts",
+		"./next-env.d.ts",
+		"./tsconfig.eslint.json",
+		".eslintrc.cjs"
+	],
+	"exclude": ["node_modules"]
+}
