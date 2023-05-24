@@ -1,15 +1,7 @@
 import "./PrimaryButton.module.scss"; // TODO: is it convenient to load the scss direcly in the module?
-import { type VariantProps } from "class-variance-authority";
-import { cvaPrimaryButton } from "./PrimaryButton.utils";
 import { twMerge } from "tailwind-merge";
-
-export interface IPrimaryButtonProps extends VariantProps<typeof cvaPrimaryButton>, React.HTMLAttributes<HTMLButtonElement> {
-	children: JSX.Element | string,
-	loading?: boolean;
-	disabled?: boolean;
-	prepend?: JSX.Element;
-	append?: JSX.Element;
-}
+import { cvaPrimaryButton } from "./PrimaryButton.utils";
+import { IPrimaryButtonProps } from "./PrimaryButton.interface";
 
 const PrimaryButton = (props: IPrimaryButtonProps) => {
 	const {
