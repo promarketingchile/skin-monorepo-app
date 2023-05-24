@@ -52,9 +52,6 @@ export const cvaPrimaryButton = cva([],{
 	buttonType: {
 		primary: '',
 		secondary: '',
-		error: '',
-		neutral: '',
-		default: ''
 	},
 	buttonStyle: {
 		shadow: '', 

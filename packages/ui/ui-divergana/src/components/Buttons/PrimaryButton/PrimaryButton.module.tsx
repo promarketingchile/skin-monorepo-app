@@ -28,8 +28,7 @@ const PrimaryButton = (props: IParimaryButtonProps) => {
 
 	return <button
 		{...props}
-		className={'font-RobotoCondensed flex items-center' +
-								twMerge(cvaPrimaryButton({buttonSize,buttonType,buttonStyle}))+' '+className}
+		className={'font-RobotoCondensed flex items-center ' + twMerge(cvaPrimaryButton({buttonSize,buttonType,buttonStyle}))+' '+className}
 		disabled={disabled}
 		{...(loading && { disabled: true })}
 	>
