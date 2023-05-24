@@ -3,10 +3,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { defineConfig, loadEnv, UserConfigExport } from 'vite';
 
-interface IEnvVars {
-	[x: string]: any;
-}
-
 /**
  * DefaultConfig.
  *
@@ -15,12 +11,16 @@ interface IEnvVars {
  * @returns Config.
  */
 const defaultConfig = ({ mode }): UserConfigExport => {
-	const minify =
-		mode === 'development' || mode === 'storybook' ? false : 'terser';
-	const sourcempas =
-		mode === 'development' || mode === 'storybook' ? true : false;
 
-	const ENV_VARS: IEnvVars = {
+	const minify = mode === 'development' || mode === 'storybook' ? false : 'terser';
+	const sourcempas = mode === 'development' || mode === 'storybook' ? true : false;
+
+	/** merge process.env vars, with loadEnv depending on the enviorment 
+	 * This implementation is not yet used in the project, nevertheless it is recommended to implement this additional control over the ENV vars due Vite restrictions on env variables naming convention. 
+	 * Note: Eslint rules were adjusted to avoid complains on not typed constants, therefore, IEnvVars was removed. 
+	 * TODO: this is optional at this development stage, and can be resolved to be removed. 
+	*/
+	const ENV_VARS = {
 		NODE_ENV: mode,
 		DEBUG: mode === 'development' || mode === 'storybook' ? true : false,
 		// eslint-disable-next-line no-undef
@@ -34,21 +34,13 @@ const defaultConfig = ({ mode }): UserConfigExport => {
 		root: './',
 		build: {
 			sourcemap: sourcempas,
-			//minify: 'terser',
+			minify: minify,
 			reportCompressedSize: true,
-			//minify: true	
-			//reportCompressedSize: true,
 			copyPublicDir: false
 		},
 		define: {
 			'process.env': ENV_VARS,
-		},
-		/*resolve: {
-			alias: {
-				// TODO! Remove this alias when development phase is over.
-				'@promarketing/types': './promarketing-types/src/index',
-			},
-		},*/
+		}
 	};
 
 	return defineConfig(config);
