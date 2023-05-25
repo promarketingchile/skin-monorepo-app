@@ -1,10 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
-	presets: [require('tailwind-config/tailwind.config')],
-	content: ['./src/**/*.{js,jsx,ts,tsx}'],
-	plugins: []
-=======
 	//presets: ['tailwind-config/tailwind.config'],
 	content: ['./stories/**/*.{js,jsx,ts,tsx}','../../packages/ui/**/*.{js,jsx,ts,tsx}'],
 	plugins: [],
@@ -227,5 +222,4 @@ module.exports = {
 			}
 		}
 	}
->>>>>>> origin/feature/poc-component-class-variance
 };
