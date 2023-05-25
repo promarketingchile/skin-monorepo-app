@@ -1,13 +1,10 @@
 {
 	"extends": "tsconfig/base.json",
 	"compilerOptions": {
-    "baseUrl": "./",
-    "types": ["@types/node","@types/jest"],
-    "jsx": "react"
-  },
-  "include": [
-		"src/**/*.ts",
-		"src/**/*.tsx"
-	],
-  "exclude": ["node_modules", "dist","src/**/*.scss"]
+		"baseUrl": "./",
+		"types": ["@types/node", "@types/jest"],
+		"jsx": "react"
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"exclude": ["node_modules", "dist", "src/**/*.scss"]
 }
