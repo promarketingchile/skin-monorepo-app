@@ -2,7 +2,7 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",
-		"dev": "turbo run dev --no-cache --continue",
+		"dev": "turbo run dev --no-cache --continue --concurrency=20",
 		"lint": "turbo run lint",
 		"lint:check": "prettier --check \"**/*.{js,ts,tsx,md,mdx,json}\"",
 		"lint:fix": "prettier --write  \"**/*.{js,ts,tsx,md,mdx,json}\"",
@@ -18,9 +18,9 @@
 		"eslint": "^8.29.0",
 		"eslint-config-custom": "0.0.0",
 		"prettier": "^2.8.0",
-		"prettier-plugin-tailwindcss": "^0.3.0",
 		"prettier-config": "*",
-		"turbo": "latest"
+		"prettier-plugin-tailwindcss": "^0.3.0",
+		"turbo": "^1.9.6"
 	},
 	"packageManager": "yarn@1.22.19",
 	"workspaces": [

@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   plugins: [
 		require("@tailwindcss/nesting"),
 		require("postcss-import"),
@@ -6,3 +7,12 @@ module.exports = {
     require('autoprefixer'),
 	],
 };
+=======
+  plugins: {
+    'postcss-import': {},
+    'tailwindcss/nesting': {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+>>>>>>> origin/feature/poc-component-class-variance
