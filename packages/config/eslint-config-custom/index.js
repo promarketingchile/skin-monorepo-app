@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-undef
 const path = require('path');
-const currentPath = path.resolve(__dirname);
 
 module.exports = {
 	globals: {
@@ -47,6 +46,7 @@ module.exports = {
 				'react/react-in-jsx-scope': 'off',
 				'react/jsx-uses-react': 'off',
 				'no-undef': 'off',
+				"react/prop-types": "off",
 
 				'@typescript-eslint/naming-convention': [
 					'off',
