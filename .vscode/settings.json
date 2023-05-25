@@ -8,7 +8,7 @@
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"editor.formatOnSave": false,
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.codeActionsOnSave": [
 		"source.addMissingImports",
 		"source.fixAll.eslint"
@@ -20,14 +20,17 @@
 	},
 	"prettier.ignorePath": ".gitignore",
 	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[javascript]": {
-		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"eslint.workingDirectories": ["./apps", "./packages/**/"],
 	"eslint.lintTask.options": "-c ./.eslintrc.json --ignore-path ./.eslintignore .",
 	"[typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+	"tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
 }

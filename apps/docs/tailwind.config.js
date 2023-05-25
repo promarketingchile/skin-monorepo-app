@@ -1,6 +1,8 @@
-const colors = require('tailwindcss/colors');
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+	//presets: ['tailwind-config/tailwind.config'],
+	content: ['./stories/**/*.{js,jsx,ts,tsx}','../../packages/ui/**/*.{js,jsx,ts,tsx}'],
+	plugins: [],
 	theme: {
 		height: {
 			'pmui--btn-large': 'var(--button-height-large)',

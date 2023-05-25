@@ -1,6 +1,10 @@
-const colors = require('tailwindcss/colors');
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+	content: [
+		'./src/**/*.{jsx,ts,tsx}',
+		'../../../apps/web/latamwin/src/**/*.{jsx,ts,tsx}',
+	],
+	plugins: [],
 	theme: {
 		height: {
 			'pmui--btn-large': 'var(--button-height-large)',
@@ -217,7 +221,7 @@ module.exports = {
 			},
 			boxShadow: {
 				'pmui--btn': 'var(--button-shadow)',
-			}
-		}
-	}
+			},
+		},
+	},
 };
