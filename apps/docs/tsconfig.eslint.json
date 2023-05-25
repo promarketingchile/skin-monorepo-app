@@ -7,6 +7,6 @@
 		// add all files in which you see
 		// the "parserOptions.project" error
 		"./tsconfig.eslint.json",
-		".eslintrc.js"
+		".eslintrc.cjs"
 	]
 }

@@ -10,6 +10,7 @@
         "lint:fix": "prettier --write  \"**/*.{js,ts,tsx,md,mdx,json}\""
     },
     "devDependencies": {
+        "@storybook/react": "^7.0.13",
         "@types/jest": "^29.5.1",
         "@types/node": "^20.2.3",
         "@types/react": "^18.2.6",
