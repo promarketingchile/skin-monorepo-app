@@ -1,10 +1,10 @@
-/** CONSTANTS. */
+ 
 import { cva } from 'class-variance-authority';
 
 
 export const cvaPrimaryButton = cva('button', {
 	variants: {
-		intent: {
+		color: {
 			primary: [
 				'bg-skin-default',
 				'text-white',
@@ -23,9 +23,9 @@ export const cvaPrimaryButton = cva('button', {
 			medium: ['text-base', 'py-2', 'px-4'],
 		},
 	},
-	compoundVariants: [{ intent: 'primary', size: 'medium', class: 'uppercase' }],
+	compoundVariants: [{ color: 'primary', size: 'medium', class: 'uppercase' }],
 	defaultVariants: {
-		intent: 'primary',
+		color: 'primary',
 		size: 'medium',
 	},
 });

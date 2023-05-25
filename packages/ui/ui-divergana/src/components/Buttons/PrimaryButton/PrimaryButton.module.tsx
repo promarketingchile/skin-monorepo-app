@@ -7,7 +7,7 @@ import { IPrimaryButtonProps } from './PrimaryButton.interface';
 const PrimaryButton = (props: IPrimaryButtonProps) => {
 	const {
 		children,
-		intent,
+		color,
 		size,
 		prepend = undefined,
 		append = undefined,
@@ -23,7 +23,7 @@ const PrimaryButton = (props: IPrimaryButtonProps) => {
 			{...props}
 			className={
 				'font-RobotoCondensed flex items-center ' +
-				twMerge(cvaPrimaryButton({ intent, size })) +
+				twMerge(cvaPrimaryButton({ color, size })) +
 				' ' +
 				className
 			}
