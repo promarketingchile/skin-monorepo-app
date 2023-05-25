@@ -12,7 +12,7 @@ module.exports = {
 	},
 	sassOptions : {
 		//includePaths: [path.join(__dirname, 'styles')],
-		additionalData: `@import "./styles/variables.scss";`,
+		additionalData: `@import "./app/styles/variables.scss";`,
 	},
 	/**
 	 * Webpack.
@@ -37,6 +37,11 @@ module.exports = {
 			'.mjs': ['.mts', '.mjs'],
 			'.cjs': ['.cts', '.cjs'],
 		};
+
+		config.resolve.alias = {
+      ...config.resolve.alias,
+      '@ui-divergana': path.resolve(__dirname, '../../../packages/ui/ui-divergana'),
+    };
 		// Overcome webpack referencing `window` in chunks
 		config.output.globalObject = 'self';
 

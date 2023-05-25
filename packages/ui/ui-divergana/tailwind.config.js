@@ -7,7 +7,6 @@ import PrimaryButtonTailwind from './src/components/Buttons/PrimaryButton/Primar
 const mergedConfig = merge(
 		preset,
 		PrimaryButtonTailwind
-		
 );
 
 export default mergedConfig;

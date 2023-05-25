@@ -1,8 +1,9 @@
 import React from 'react';
-import './PrimaryButton.module.scss'; // TODO: is it convenient to load the scss direcly in the module?
+//import './PrimaryButton.module.scss'; // TODO: is it convenient to load the scss direcly in the module?
 import { twMerge } from 'tailwind-merge';
 import { cvaPrimaryButton } from './PrimaryButton.utils';
 import { IPrimaryButtonProps } from './PrimaryButton.interface';
+import './PrimaryButton.module.css';
 
 const PrimaryButton = (props: IPrimaryButtonProps) => {
 	const {
@@ -23,7 +24,7 @@ const PrimaryButton = (props: IPrimaryButtonProps) => {
 		<button
 			{...props}
 			className={
-				'font-RobotoCondensed flex items-center ' +
+				'PrimaryButton font-RobotoCondensed flex items-center ' +
 				twMerge(cvaPrimaryButton({ buttonSize, buttonType, buttonStyle })) +
 				' ' +
 				className
