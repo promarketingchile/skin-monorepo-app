@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-	presets: ['tailwind-config/tailwind.config'],
-	content: ['./src/**/*.{html,js}'],
-	plugins: [],
-};
+import preset from './tailwind.base.js';
+import merge from 'deepmerge';
+
+import PrimaryButtonTailwind from './src/components/Buttons/PrimaryButton/PrimaryButton.tailwind.js'
+
+const mergedConfig = merge(
+		preset,
+		PrimaryButtonTailwind
+		
+);
+
+export default mergedConfig;

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import presets from 'tailwind-config/tailwind.config';
-module.exports = {
+import presets from 'ui-divergana/tailwind.config';
+const config = {
 	content: [
 		"../../../packages/ui/**/*.{js,ts,jsx,tsx}",
     "./**/*.{js,ts,jsx,tsx}",
@@ -9,3 +9,5 @@ module.exports = {
 	plugins: [],
 	...presets,
 };
+
+export default config;
