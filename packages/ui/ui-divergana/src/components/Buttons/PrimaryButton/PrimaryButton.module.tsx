@@ -2,7 +2,6 @@ import "./PrimaryButton.module.scss"; // TODO: is it convenient to load the scss
 import { twMerge } from "tailwind-merge";
 import { cvaPrimaryButton } from "./PrimaryButton.utils";
 import { IPrimaryButtonProps } from "./PrimaryButton.interface";
-import { IParimaryButtonProps } from ".";
 
 const PrimaryButton = (props: IPrimaryButtonProps) => {
 	const {
