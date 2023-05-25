@@ -1,33 +1,10 @@
 {
-    "compilerOptions": {
-        "baseUrl": "./",
-        "types": ["@types/node"],
-        "noImplicitAny": false,
-		"noImplicitThis": true,
-		"strictNullChecks": false,
-		"experimentalDecorators": true,
-		"removeComments": true,
-		"target": "ESNext",
-		"lib": ["DOM", "DOM.Iterable", "ESNext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"module": "esnext",
-		"moduleResolution": "Node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-        "paths": {
-            "@/": ["./src"]
-        }
-    },
-    "include": [
-		"src/**/*.ts",
-		"src/**/*.tsx",
-		"src/**/*.scss"
-	],
-    "exclude": ["node_modules", "dist"]
+	"extends": "tsconfig/base.json",
+	"compilerOptions": {
+		"baseUrl": "./",
+		"types": ["@types/node", "@types/jest"],
+		"jsx": "react"
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"exclude": ["node_modules", "dist", "src/**/*.scss"]
 }

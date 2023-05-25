@@ -8,6 +8,7 @@ const configuration: Config.InitialOptions = {
 	extensionsToTreatAsEsm: ['.tsx'],
 	moduleNameMapper: {
 		'^(\\.{1,2}/.*)\\.js$': '$1',
+		'^.+\\.(css|less|scss)$': 'babel-jest',
 	},
 	transform: {
 		'^.+\\.ts?$': 'ts-jest',

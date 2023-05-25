@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
 module.exports = {
 	swcMinify: true,
 	reactStrictMode: true,
@@ -8,6 +9,10 @@ module.exports = {
 	},
 	eslint: {
 		dirs: ['app'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+	},
+	sassOptions : {
+		//includePaths: [path.join(__dirname, 'styles')],
+		additionalData: `@import "./styles/variables.scss";`,
 	},
 	/**
 	 * Webpack.
@@ -34,6 +39,9 @@ module.exports = {
 		};
 		// Overcome webpack referencing `window` in chunks
 		config.output.globalObject = 'self';
+
+	
+
 		return config;
 	},
 };
