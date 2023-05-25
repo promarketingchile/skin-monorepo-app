@@ -1,6 +1,6 @@
-import 'tailwindcss/tailwind.css';
+
 import 'ui-divergana/src/tailwind-base.scss';
-import 'ui-latamwin/styles.css';
+import './../styles/variables.scss'
 
 export default function RootLayout({
 	children,

@@ -3,17 +3,17 @@ const path = require('path');
 module.exports = {
 	swcMinify: true,
 	reactStrictMode: true,
-	transpilePackages: ['ui-latamwin', 'ui-divergana'],
+	transpilePackages: ['ui-divergana'],
 	sassOptions: {
-		includePaths: ['ui-divergana/components/**/*'],
+		includePaths: [
+			'ui-divergana/components/**/*',
+			path.join(__dirname, 'styles'),
+		],
 	},
 	eslint: {
 		dirs: ['app'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
 	},
-	sassOptions : {
-		//includePaths: [path.join(__dirname, 'styles')],
-		additionalData: `@import "./styles/variables.scss";`,
-	},
+
 	/**
 	 * Webpack.
 	 *
@@ -39,8 +39,6 @@ module.exports = {
 		};
 		// Overcome webpack referencing `window` in chunks
 		config.output.globalObject = 'self';
-
-	
 
 		return config;
 	},

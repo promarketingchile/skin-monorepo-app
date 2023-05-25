@@ -1,5 +1,209 @@
-$primary-color: #64ff00;
- 
-:export {
-  primaryColor: $primary-color;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.mauricio {
+  background: rgb(218, 11, 11);
+}
+
+
+html:root,
+[data-theme] {
+	background-color: #efefef;
+}
+
+@layer base {
+	:root {
+		/* Pallete Colors */
+		/* Primary  */
+		--color-primary-default: rgb(19, 172, 55);
+		--color-primary-focus: #3c4d82;
+		--color-primary-content: #e0e4ef;
+		/* secondary  */
+		--color-secondary-default: #b89122;
+		--color-secondary-focus: #cfac48;
+		--color-secondary-content: #faf3e0;
+		/* accent */
+		--color-accent-default: #fbbf24;
+		--color-accent-focus: #fcd34d;
+		--color-accent-content: #fff7d7;
+		/* neutrals (fonts) */
+		--color-neutral-default: #0a1d37;
+		--color-neutral-focus: #4b5563;
+		--color-neutral-content: #909090;
+
+		/* Feedback Colors */
+		/* colors */
+		--color-info-content: #1d70c7;
+		--color-success-content: #22c55e;
+		--color-warning-content: #f3b51e;
+		--color-error-content: #dc2626;
+		/* opacity colors 50% */
+		--color-info: #d7f1fd;
+		--color-success: #edfbd8;
+		--color-warning: #fef7d1;
+		--color-error: #fce8db;
+		/* Bases */
+		--color-base-100: #efefef;
+		--color-base-200: #192e4f;
+		--color-base-300: #e0c87b;
+		--color-base-content: #ebdaae;
+
+		/* Reference combines */
+		/* Gradients */
+		--color-gradient-navbar-primary: var(--color-base-300);
+		--color-gradient-navbar-secondary: var(--color-secondary-default);
+		--color-gradient-footer-primary: var(--color-primary-default);
+		--color-gradient-footer-secondary: #0a1e33;
+		--gradient-radial-navbar: radial-gradient(
+			95.79% 95.79% at 49.97% 4.21%,
+			var(--color-gradient-navbar-primary) 0%,
+			var(--color-gradient-navbar-secondary) 100%
+		);
+		--gradient-radial-footer: radial-gradient(
+			95.79% 95.79% at 49.97% 4.21%,
+			var(--color-gradient-footer-primary) 0%,
+			var(--color-gradient-footer-secondary) 100%
+		);
+		--color-white: #ffffff;
+		--color-black: #000000;
+
+		/* Button props */
+		--button-height-large: 51px;
+		--button-padding-large: 14px 32px;
+		--button-font-weight-large: 700;
+		--button-font-size-large: 20px;
+		--button-line-height-large: 23px;
+		--button-border-radius-large: 12px;
+
+		--button-height-medium: 40px;
+		--button-padding-medium: 8.5px 32px;
+		--button-font-weight-medium: 700;
+		--button-font-size-medium: 20px;
+		--button-line-height-medium: 23px;
+		--button-border-radius-medium: 8px;
+
+		--button-height-small: 32px;
+		--button-padding-small: 9px 18px;
+		--button-font-weight-small: 700;
+		--button-font-size-small: 12px;
+		--button-line-height-small: 14px;
+		--button-border-radius-small: 8px;
+
+		--button-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+
+		/* button primary default */
+		--button-primary-default-color-text: var(--color-white);
+		--button-primary-default-color-bg: var(--color-primary-default);
+		--button-primary-default-color-border: var(--color-primary-default);
+		/* button primary hover */
+		--button-primary-default-hover-color-text: var(--color-white);
+		--button-primary-default-hover-color-bg: var(--color-primary-focus);
+		--button-primary-default-hover-color-border: var(--color-primary-focus);
+		/* button primary pressed */
+		--button-primary-default-pressed-color-text: var(--color-white);
+		--button-primary-default-pressed-color-bg: var(--color-primary-focus);
+		--button-primary-default-pressed-color-border: var(--color-primary-focus);
+		/* button primary disabled */
+		--button-primary-default-disabled-color-text: var(--color-neutral-content);
+		--button-primary-default-disabled-color-bg: var(--color-base-100);
+		--button-primary-default-disabled-color-border: var(--color-base-100);
+
+		/* button primary outlined default */
+		--button-primary-outlined-color-text: var(--color-primary-default);
+		--button-primary-outlined-color-bg: transparent;
+		--button-primary-outlined-color-border: var(--color-primary-default);
+		/* button primary outlined hover */
+		--button-primary-outlined-hover-color-text: var(--color-primary-default);
+		--button-primary-outlined-hover-color-bg: var(--color-primary-content);
+		--button-primary-outlined-hover-color-border: var(--color-primary-focus);
+		/* button primary outlined pressed */
+		--button-primary-outlined-pressed-color-text: var(--color-white);
+		--button-primary-outlined-pressed-color-bg: var(--color-primary-focus);
+		--button-primary-outlined-pressed-color-border: var(
+			--color-primary-default
+		);
+		/* button primary outlined disabled */
+		--button-primary-outlined-disabled-color-text: var(--color-neutral-content);
+		--button-primary-outlined-disabled-color-bg: transparent;
+		--button-primary-outlined-disabled-color-border: var(
+			--color-neutral-content
+		);
+
+		/* button primary text default */
+		--button-primary-text-color-text: var(--color-primary-default);
+		--button-primary-text-color-bg: transparent;
+		--button-primary-text-color-border: transparent;
+		/* button primary text hover */
+		--button-primary-text-hover-color-text: var(--color-primary-default);
+		--button-primary-text-hover-color-bg: var(--color-primary-content);
+		--button-primary-text-hover-color-border: var(--color-primary-content);
+		/* button primary text pressed */
+		--button-primary-text-pressed-color-text: var(--color-white);
+		--button-primary-text-pressed-color-bg: var(--color-primary-focus);
+		--button-primary-text-pressed-color-border: var(--color-primary-focus);
+		/* button primary text disabled */
+		--button-primary-text-disabled-color-text: var(--color-neutral-content);
+		--button-primary-text-disabled-color-bg: transparent;
+		--button-primary-text-disabled-color-border: transparent;
+
+		/* button secondary default */
+		--button-secondary-default-color-text: var(--color-primary-default);
+		--button-secondary-default-color-bg: var(--color-accent-default);
+		--button-secondary-default-color-border: var(--color-accent-default);
+		/* button secondary hover */
+		--button-secondary-default-hover-color-text: var(--color-primary-default);
+		--button-secondary-default-hover-color-bg: var(--color-accent-focus);
+		--button-secondary-default-hover-color-border: var(--color-accent-focus);
+		/* button secondary pressed */
+		--button-secondary-default-pressed-color-text: var(--color-primary-default);
+		--button-secondary-default-pressed-color-bg: var(--color-accent-focus);
+		--button-secondary-default-pressed-color-border: var(--color-accent-focus);
+		/* button secondary disabled */
+		--button-secondary-default-disabled-color-text: var(
+			--color-neutral-content
+		);
+		--button-secondary-default-disabled-color-bg: var(--color-accent-content);
+		--button-secondary-default-disabled-color-border: var(
+			--color-accent-content
+		);
+
+		/* button secondary outlined default */
+		--button-secondary-outlined-color-text: var(--color-accent-default);
+		--button-secondary-outlined-color-bg: transparent;
+		--button-secondary-outlined-color-border: var(--color-accent-default);
+		/* button secondary outlined hover */
+		--button-secondary-outlined-hover-color-text: var(--color-accent-default);
+		--button-secondary-outlined-hover-color-bg: var(--color-accent-content);
+		--button-secondary-outlined-hover-color-border: var(--color-accent-default);
+		/* button secondary outlined pressed */
+		--button-secondary-outlined-pressed-color-text: var(--color-white);
+		--button-secondary-outlined-pressed-color-bg: var(--color-accent-focus);
+		--button-secondary-outlined-pressed-color-border: var(--color-accent-focus);
+		/* button secondary outlined disabled */
+		--button-secondary-outlined-disabled-color-text: var(
+			--color-neutral-content
+		);
+		--button-secondary-outlined-disabled-color-bg: transparent;
+		--button-secondary-outlined-disabled-color-border: var(
+			--color-neutral-content
+		);
+
+		/* button secondary text default */
+		--button-secondary-text-color-text: var(--color-accent-default);
+		--button-secondary-text-color-bg: transparent;
+		--button-secondary-text-color-border: transparent;
+		/* button secondary text hover */
+		--button-secondary-text-hover-color-text: var(--color-accent-default);
+		--button-secondary-text-hover-color-bg: var(--color-accent-content);
+		--button-secondary-text-hover-color-border: var(--color-accent-content);
+		/* button secondary text pressed */
+		--button-secondary-text-pressed-color-text: var(--color-white);
+		--button-secondary-text-pressed-color-bg: var(--color-accent-focus);
+		--button-secondary-text-pressed-color-border: var(--color-accent-focus);
+		/* button secondary text disabled */
+		--button-secondary-text-disabled-color-text: var(--color-neutral-content);
+		--button-secondary-text-disabled-color-bg: transparent;
+		--button-secondary-text-disabled-color-border: transparent;
+	}
 }
