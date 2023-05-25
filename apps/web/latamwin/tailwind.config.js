@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+import presets from 'tailwind-config/tailwind.config';
 module.exports = {
 	content: ['./app/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		...presets.theme,
+		extend: { ...presets.extend },
 	},
 	plugins: [],
 };
