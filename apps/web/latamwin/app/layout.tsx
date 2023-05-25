@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css';
-import 'ui-divergana/src/tailwind-base.scss'
+import 'ui-divergana/src/tailwind-base.scss';
 import 'ui-latamwin/styles.css';
 
 export default function RootLayout({

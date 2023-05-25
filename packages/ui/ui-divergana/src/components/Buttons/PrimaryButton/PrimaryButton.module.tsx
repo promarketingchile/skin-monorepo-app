@@ -1,3 +1,4 @@
+import React from 'react';
 import './PrimaryButton.module.scss'; // TODO: is it convenient to load the scss direcly in the module?
 import { twMerge } from 'tailwind-merge';
 import { cvaPrimaryButton } from './PrimaryButton.utils';
