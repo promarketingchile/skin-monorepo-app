@@ -5,6 +5,6 @@
 		"types": ["@types/node", "@types/jest"],
 		"jsx": "react"
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.cjs"],
 	"exclude": ["node_modules", "dist", "src/**/*.scss"]
 }

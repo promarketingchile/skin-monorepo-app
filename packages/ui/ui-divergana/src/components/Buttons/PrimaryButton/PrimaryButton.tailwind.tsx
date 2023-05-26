@@ -1,35 +1,35 @@
 const config = {
-  theme: {
-    height: {
-      'pmui--btn-large': 'var(--button-height-large)',
-      'pmui--btn-medium': 'var(--button-height-medium)',
-      'pmui--btn-small': 'var(--button-height-small)',
-    },
-    padding: {
-      'pmui--btn-large': 'var(--button-padding-large)',
-      'pmui--btn-medium': 'var(--button-padding-medium)',
-      'pmui--btn-small': 'var(--button-padding-small)',
-    },
-    fontWeight: {
-      'pmui--btn-large': 'var(--button-font-weight-large)',
-      'pmui--btn-medium': 'var(--button-font-weight-medium)',
-      'pmui--btn-small': 'var(--button-font-weight-small)',
-    },
-    fontSize: {
-      'pmui--btn-large': 'var(--button-font-size-large)',
-      'pmui--btn-medium': 'var(--button-font-size-medium)',
-      'pmui--btn-small': 'var(--button-font-size-small)',
-    },
-    lineHeight: {
-      'pmui--btn-large': 'var(--button-line-height-large)',
-      'pmui--btn-medium': 'var(--button-line-height-medium)',
-      'pmui--btn-small': 'var(--button-line-height-small)',
-    },
-    borderRadius: {
-      'pmui--btn-large': 'var(--button-border-radius-large)',
-      'pmui--btn-medium': 'var(--button-border-radius-medium)',
-      'pmui--btn-small': 'var(--button-border-radius-small)',
-    },
+	theme: {
+		height: {
+			'pmui--btn-large': 'var(--button-height-large)',
+			'pmui--btn-medium': 'var(--button-height-medium)',
+			'pmui--btn-small': 'var(--button-height-small)',
+		},
+		padding: {
+			'pmui--btn-large': 'var(--button-padding-large)',
+			'pmui--btn-medium': 'var(--button-padding-medium)',
+			'pmui--btn-small': 'var(--button-padding-small)',
+		},
+		fontWeight: {
+			'pmui--btn-large': 'var(--button-font-weight-large)',
+			'pmui--btn-medium': 'var(--button-font-weight-medium)',
+			'pmui--btn-small': 'var(--button-font-weight-small)',
+		},
+		fontSize: {
+			'pmui--btn-large': 'var(--button-font-size-large)',
+			'pmui--btn-medium': 'var(--button-font-size-medium)',
+			'pmui--btn-small': 'var(--button-font-size-small)',
+		},
+		lineHeight: {
+			'pmui--btn-large': 'var(--button-line-height-large)',
+			'pmui--btn-medium': 'var(--button-line-height-medium)',
+			'pmui--btn-small': 'var(--button-line-height-small)',
+		},
+		borderRadius: {
+			'pmui--btn-large': 'var(--button-border-radius-large)',
+			'pmui--btn-medium': 'var(--button-border-radius-medium)',
+			'pmui--btn-small': 'var(--button-border-radius-small)',
+		},
 		extend: {
 			textColor: {
 				'pmui--btn-primary': {
@@ -166,10 +166,10 @@ const config = {
 			},
 			boxShadow: {
 				'pmui--btn': 'var(--button-shadow)',
-			}
+			},
 
-  }
-  }
-}
+		},
+	},
+};
 
 export default config;

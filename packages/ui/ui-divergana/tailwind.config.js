@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-import preset from './tailwind.base.js';
+import preset from './tailwind.base';
 import merge from 'deepmerge';
 
-import PrimaryButtonTailwind from './src/components/Buttons/PrimaryButton/PrimaryButton.tailwind.js'
+import PrimaryButtonTailwind from './src/components/Buttons/PrimaryButton/PrimaryButton.tailwind';
 
 const mergedConfig = merge(
-		preset,
-		PrimaryButtonTailwind
+	preset,
+	PrimaryButtonTailwind,
 );
 
 export default mergedConfig;

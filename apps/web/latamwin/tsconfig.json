@@ -7,18 +7,10 @@
 			}
 		],
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./app/*"]
 		},
 		"incremental": true
 	},
-	"include": [
-		"**/*.ts",
-		"**/*.tsx",
-		"next-env.d.ts",
-		".next/types/**/*.ts",
-		"./next-env.d.ts",
-		"./tsconfig.eslint.json",
-		".eslintrc.cjs"
-	],
+	"include": ["app/**/*.ts", "app/**/*.tsx", ".next/types/**/*.ts"],
 	"exclude": ["node_modules"]
 }

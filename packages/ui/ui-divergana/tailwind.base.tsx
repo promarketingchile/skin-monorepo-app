@@ -7,9 +7,9 @@ const config = {
 				NimbusSans: ['NimbusSanL', 'sans-serif'],
 				SegoeUI: ['SegoeUI', 'sans-serif'],
 				Poppins: ['Poppins', 'sans-serif'],
-			}
-		}
-	}
+			},
+		},
+	},
 };
 
 export default config;

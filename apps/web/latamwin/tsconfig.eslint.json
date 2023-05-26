@@ -3,10 +3,19 @@
 	"include": [
 		// 👇️ add all the directories and files
 		// that you want to lint here
-		"./next-env.d.ts",
-		"./tsconfig.eslint.json",
+		"app",
 		// add all files in which you see
 		// the "parserOptions.project" error
-		".eslintrc.cjs"
+		"./tsconfig.json",
+		"./tsconfig.eslint.json",
+		"./postcss.config.ts",
+		"./tailwind.config.ts",
+		"./prettierrc.ts",
+		"./.eslintrc.js",
+		"./postcss.config.ts",
+		"./.next/types/**/*.ts",
+		"./next.config.js",
+		"./next-env.d.ts",
+		"./tsconfig.eslint.json"
 	]
 }
