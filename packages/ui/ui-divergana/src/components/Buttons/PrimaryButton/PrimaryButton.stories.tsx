@@ -16,7 +16,7 @@ const Template: StoryFn<IPrimaryButtonProps> = ({ children, ...args }) => {
 const argTypes: Partial<ArgTypes<IPrimaryButtonProps>> = {
 	onClick: { control: false },
 	children: { control: false },
-	color: {
+	intent: {
 		options: ['primary', 'secondary'],
 		control: { type: 'select' },
 	},
@@ -34,7 +34,7 @@ PrimaryButtonDefault.argTypes = argTypes;
 PrimaryButtonDefault.args = {
 	children: 'Text',
 	onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	color: 'primary',
+	intent: 'primary',
 	size: 'small',
 };
 
@@ -43,7 +43,7 @@ PrimaryButtonShadow.argTypes = argTypes;
 PrimaryButtonShadow.args = {
 	children: 'Text',
 	onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => alert(e.target),
-	color: 'primary',
+	intent: 'primary',
 	size: 'medium',
 };
 

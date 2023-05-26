@@ -4,7 +4,7 @@ import { PrimaryButton } from 'ui-divergana';
 export default function Page() {
 	return (
 		<>
-			<div className='flex w-full justify-center text-lg'>
+			<div className='mauricio'>
 				<h2>{toSlug('latamwin-chile')}</h2>
 				<PrimaryButton color='secondary' >Botón Primario</PrimaryButton>
 			</div>
