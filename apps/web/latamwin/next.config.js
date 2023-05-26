@@ -1,16 +1,15 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
+
 module.exports = {
 	swcMinify: true,
 	reactStrictMode: true,
 	transpilePackages: ['ui-latamwin', 'ui-divergana'],
-	sassOptions: {
-		includePaths: ['ui-divergana/components/**/*'],
-	},
 	eslint: {
 		dirs: ['app'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
 	},
 	sassOptions : {
+		//includePaths: ['ui-divergana/components/**/*.scss','ui-divergana/**/*.scss'],
 		//includePaths: [path.join(__dirname, 'styles')],
 		additionalData: `@import "./app/styles/variables.scss";`,
 	},
@@ -50,3 +49,4 @@ module.exports = {
 		return config;
 	},
 };
+
